@@ -9,11 +9,15 @@
 /* Begin PBXBuildFile section */
 		AC2D28561BF88BAC007E2B8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2D28551BF88BAC007E2B8E /* AppDelegate.swift */; };
 		AC2D28581BF88BAC007E2B8E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2D28571BF88BAC007E2B8E /* ViewController.swift */; };
-		AC2D285B1BF88BAC007E2B8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC2D28591BF88BAC007E2B8E /* Main.storyboard */; };
 		AC2D285D1BF88BAC007E2B8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC2D285C1BF88BAC007E2B8E /* Assets.xcassets */; };
-		AC2D28601BF88BAC007E2B8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC2D285E1BF88BAC007E2B8E /* LaunchScreen.storyboard */; };
 		AC2D286B1BF88BAC007E2B8E /* onetapmusicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2D286A1BF88BAC007E2B8E /* onetapmusicTests.swift */; };
 		AC2D28761BF88BAC007E2B8E /* onetapmusicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2D28751BF88BAC007E2B8E /* onetapmusicUITests.swift */; };
+		AC2D28841BF89033007E2B8E /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2D28831BF89032007E2B8E /* Music.swift */; };
+		AC2D28861BF893AF007E2B8E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC2D28851BF893AF007E2B8E /* Default-568h@2x.png */; };
+		AC2D28881BF89441007E2B8E /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2D28871BF89441007E2B8E /* MediaPlayer.framework */; };
+		AC2D288A1BF89482007E2B8E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2D28891BF89482007E2B8E /* AVFoundation.framework */; };
+		AC8D613A1C0B3CE000CB1A72 /* PlayListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8D61391C0B3CE000CB1A72 /* PlayListViewController.swift */; };
+		AC8D613C1C0BB82300CB1A72 /* SongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8D613B1C0BB82200CB1A72 /* SongViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +41,7 @@
 		AC2D28521BF88BAC007E2B8E /* onetapmusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = onetapmusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC2D28551BF88BAC007E2B8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC2D28571BF88BAC007E2B8E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AC2D285A1BF88BAC007E2B8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC2D285C1BF88BAC007E2B8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AC2D285F1BF88BAC007E2B8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC2D28611BF88BAC007E2B8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC2D28661BF88BAC007E2B8E /* onetapmusicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = onetapmusicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC2D286A1BF88BAC007E2B8E /* onetapmusicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onetapmusicTests.swift; sourceTree = "<group>"; };
@@ -47,6 +49,12 @@
 		AC2D28711BF88BAC007E2B8E /* onetapmusicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = onetapmusicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC2D28751BF88BAC007E2B8E /* onetapmusicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onetapmusicUITests.swift; sourceTree = "<group>"; };
 		AC2D28771BF88BAC007E2B8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC2D28831BF89032007E2B8E /* Music.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
+		AC2D28851BF893AF007E2B8E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		AC2D28871BF89441007E2B8E /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		AC2D28891BF89482007E2B8E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		AC8D61391C0B3CE000CB1A72 /* PlayListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayListViewController.swift; sourceTree = "<group>"; };
+		AC8D613B1C0BB82200CB1A72 /* SongViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC2D288A1BF89482007E2B8E /* AVFoundation.framework in Frameworks */,
+				AC2D28881BF89441007E2B8E /* MediaPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +87,9 @@
 		AC2D28491BF88BAC007E2B8E = {
 			isa = PBXGroup;
 			children = (
+				AC2D28891BF89482007E2B8E /* AVFoundation.framework */,
+				AC2D28871BF89441007E2B8E /* MediaPlayer.framework */,
+				AC2D28851BF893AF007E2B8E /* Default-568h@2x.png */,
 				AC2D28541BF88BAC007E2B8E /* onetapmusic */,
 				AC2D28691BF88BAC007E2B8E /* onetapmusicTests */,
 				AC2D28741BF88BAC007E2B8E /* onetapmusicUITests */,
@@ -99,9 +112,10 @@
 			children = (
 				AC2D28551BF88BAC007E2B8E /* AppDelegate.swift */,
 				AC2D28571BF88BAC007E2B8E /* ViewController.swift */,
-				AC2D28591BF88BAC007E2B8E /* Main.storyboard */,
+				AC8D61391C0B3CE000CB1A72 /* PlayListViewController.swift */,
+				AC8D613B1C0BB82200CB1A72 /* SongViewController.swift */,
+				AC2D28831BF89032007E2B8E /* Music.swift */,
 				AC2D285C1BF88BAC007E2B8E /* Assets.xcassets */,
-				AC2D285E1BF88BAC007E2B8E /* LaunchScreen.storyboard */,
 				AC2D28611BF88BAC007E2B8E /* Info.plist */,
 			);
 			path = onetapmusic;
@@ -229,9 +243,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC2D28601BF88BAC007E2B8E /* LaunchScreen.storyboard in Resources */,
 				AC2D285D1BF88BAC007E2B8E /* Assets.xcassets in Resources */,
-				AC2D285B1BF88BAC007E2B8E /* Main.storyboard in Resources */,
+				AC2D28861BF893AF007E2B8E /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,8 +269,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC8D613A1C0B3CE000CB1A72 /* PlayListViewController.swift in Sources */,
 				AC2D28581BF88BAC007E2B8E /* ViewController.swift in Sources */,
+				AC8D613C1C0BB82300CB1A72 /* SongViewController.swift in Sources */,
 				AC2D28561BF88BAC007E2B8E /* AppDelegate.swift in Sources */,
+				AC2D28841BF89033007E2B8E /* Music.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,25 +307,6 @@
 			targetProxy = AC2D28721BF88BAC007E2B8E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		AC2D28591BF88BAC007E2B8E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AC2D285A1BF88BAC007E2B8E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		AC2D285E1BF88BAC007E2B8E /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AC2D285F1BF88BAC007E2B8E /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		AC2D28781BF88BAC007E2B8E /* Debug */ = {
@@ -482,6 +479,7 @@
 				AC2D287C1BF88BAC007E2B8E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AC2D287D1BF88BAC007E2B8E /* Build configuration list for PBXNativeTarget "onetapmusicTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +488,7 @@
 				AC2D287F1BF88BAC007E2B8E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AC2D28801BF88BAC007E2B8E /* Build configuration list for PBXNativeTarget "onetapmusicUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +497,7 @@
 				AC2D28821BF88BAC007E2B8E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

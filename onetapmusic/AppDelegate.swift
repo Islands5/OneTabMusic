@@ -12,10 +12,31 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var tappedSongId: NSNumber?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        let viewCtr = ViewController()
+        
+        let tabBarController = UITabBarController()
+        let playListViewController = PlayListViewController()
+        let navigationController = UINavigationController(rootViewController: playListViewController)
+        navigationController.setNavigationBarHidden(true, animated:true)
+        tabBarController.setViewControllers(
+            [
+                viewCtr,
+                navigationController
+            ]
+            , animated: true
+        )
+        
+        viewCtr.tabBarItem.title = "再生"
+        playListViewController.tabBarItem.title = "再生リスト"
+        
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        self.window?.rootViewController = tabBarController
+        self.window?.makeKeyAndVisible()
+        
         return true
     }
 
