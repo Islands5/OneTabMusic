@@ -15,6 +15,7 @@ class PlayListViewController: UIViewController, UITableViewDelegate, UITableView
     var albums = [AlbumInfo]()
     var myTableView: UITableView!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

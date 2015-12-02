@@ -7,14 +7,20 @@
 //
 
 import UIKit
+import MediaPlayer
+protocol SongViewControllerDelegate: NSObjectProtocol{
+    func songViewControllerDidSongSelect(songViewController:SongViewController,songID:NSNumber)
+}
 
 class SongViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    weak var delegate:SongViewControllerDelegate?
     var songIndex: Int
     var music = Music()
     var songQuery: Music = Music()
     var albums = [AlbumInfo]()
     var myTableView: UITableView!
-    var appDelegate = AppDelegate()
+    var appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    
     
     init() {
         songIndex = 0
@@ -41,6 +47,8 @@ class SongViewController: UIViewController, UITableViewDelegate, UITableViewData
         myTableView.delegate = self
         self.view.addSubview(myTableView)
         // Do any additional setup after loading the view.
+        NSNotificationCenter.defaultCenter().post
+        self.tabBarController.child
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,7 +60,20 @@ class SongViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.navigationController?.tabBarController?.selectedIndex = 0
         let songId = albums[songIndex].songs[indexPath.row].songId
-        appDelegate.tappedSongId = songId
+        delegate?.songViewControllerDidSongSelect(self, songID: songId)
+        let item: MPMediaItem = appDelegate.playMusicOfSongId(songId)
+        if let url: NSURL = item.valueForProperty(MPMediaItemPropertyAssetURL) as? NSURL {
+            do {
+                
+                if(appDelegate.audioPlayer.playing) {
+                    appDelegate.audioPlayer.stop()
+                }
+                appDelegate.audioPlayer = try AVAudioPlayer(contentsOfURL: url)
+                appDelegate.audioPlayer.play()
+            } catch {
+                
+            }
+        }
     }
     /* Cellの総数を返すデータソースメソッド. (実装必須)
     */

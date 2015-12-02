@@ -16,6 +16,7 @@
 		AC2D28861BF893AF007E2B8E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC2D28851BF893AF007E2B8E /* Default-568h@2x.png */; };
 		AC2D28881BF89441007E2B8E /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2D28871BF89441007E2B8E /* MediaPlayer.framework */; };
 		AC2D288A1BF89482007E2B8E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2D28891BF89482007E2B8E /* AVFoundation.framework */; };
+		AC580EAF1C0E5CD90074C546 /* onpu350.png in Resources */ = {isa = PBXBuildFile; fileRef = AC580EAE1C0E5CD90074C546 /* onpu350.png */; };
 		AC8D613A1C0B3CE000CB1A72 /* PlayListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8D61391C0B3CE000CB1A72 /* PlayListViewController.swift */; };
 		AC8D613C1C0BB82300CB1A72 /* SongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8D613B1C0BB82200CB1A72 /* SongViewController.swift */; };
 /* End PBXBuildFile section */
@@ -53,6 +54,7 @@
 		AC2D28851BF893AF007E2B8E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		AC2D28871BF89441007E2B8E /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		AC2D28891BF89482007E2B8E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		AC580EAE1C0E5CD90074C546 /* onpu350.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = onpu350.png; sourceTree = "<group>"; };
 		AC8D61391C0B3CE000CB1A72 /* PlayListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayListViewController.swift; sourceTree = "<group>"; };
 		AC8D613B1C0BB82200CB1A72 /* SongViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,6 +115,7 @@
 				AC2D28551BF88BAC007E2B8E /* AppDelegate.swift */,
 				AC2D28571BF88BAC007E2B8E /* ViewController.swift */,
 				AC8D61391C0B3CE000CB1A72 /* PlayListViewController.swift */,
+				AC580EAE1C0E5CD90074C546 /* onpu350.png */,
 				AC8D613B1C0BB82200CB1A72 /* SongViewController.swift */,
 				AC2D28831BF89032007E2B8E /* Music.swift */,
 				AC2D285C1BF88BAC007E2B8E /* Assets.xcassets */,
@@ -243,6 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC580EAF1C0E5CD90074C546 /* onpu350.png in Resources */,
 				AC2D285D1BF88BAC007E2B8E /* Assets.xcassets in Resources */,
 				AC2D28861BF893AF007E2B8E /* Default-568h@2x.png in Resources */,
 			);

@@ -7,12 +7,19 @@
 //
 
 import UIKit
+import MediaPlayer
+import AVFoundation
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate {
 
     var window: UIWindow?
     var tappedSongId: NSNumber?
+    var music = Music()
+    var albums: [AlbumInfo] = []
+    var songQuery: Music = Music()
+    var audioPlayer = AVAudioPlayer()
+    
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -31,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         )
         
         viewCtr.tabBarItem.title = "再生"
-        playListViewController.tabBarItem.title = "再生リスト"
+        navigationController.tabBarItem.title = "アルバム"
         
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window?.rootViewController = tabBarController
@@ -60,6 +67,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func playMusicOfSongId(var songId: NSNumber? = nil) -> MPMediaItem {
+        var item: MPMediaItem
+        if(songId == nil){
+            albums = songQuery.get()
+            songId = albums[1].songs[2].songId
+            item = songQuery.getItem(songId!)
+        }else {
+            item = songQuery.getItem(songId!)
+        }
+        return item
     }
 
 

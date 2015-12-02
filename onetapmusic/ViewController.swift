@@ -10,48 +10,37 @@ import UIKit
 import MediaPlayer
 import AVFoundation
 
-class ViewController: UIViewController, AVAudioPlayerDelegate {
+class ViewController: UIViewController {
 
     var music = Music()
     var albums: [AlbumInfo] = []
     var songQuery: Music = Music()
-    var audio: AVAudioPlayer! = nil
-    var audioPlayer: AVAudioPlayer!
-    var appDelegate = AppDelegate()
+    var appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if((appDelegate.tappedSongId) != nil) {
-            let item: MPMediaItem = songQuery.getItem(appDelegate.tappedSongId!)
-            if let url: NSURL = item.valueForProperty(MPMediaItemPropertyAssetURL) as? NSURL {
-                do {
-                    audioPlayer = try AVAudioPlayer(contentsOfURL: url)
-                    audioPlayer.delegate = self
-                    audioPlayer.play()
-                } catch {
-                    
-                }
-            }
-            
-        } else {
-            
-            albums = songQuery.get()
-            
-            dump(albums)
-            let songId: NSNumber = albums[1].songs[1].songId
-            let item: MPMediaItem = songQuery.getItem(songId)
-            print(item.valueForProperty(MPMediaItemPropertyAssetURL))
-            if let url: NSURL = item.valueForProperty(MPMediaItemPropertyAssetURL) as? NSURL {
-                do {
-                audioPlayer = try AVAudioPlayer(contentsOfURL: url)
-                audioPlayer.delegate = self
-                audioPlayer.play()
-                } catch {
-                    
-                }
+        let item: MPMediaItem = appDelegate.playMusicOfSongId()
+        if let url: NSURL = item.valueForProperty(MPMediaItemPropertyAssetURL) as? NSURL {
+            do {
+                appDelegate.audioPlayer = try AVAudioPlayer(contentsOfURL: url)
+                appDelegate.audioPlayer.play()
+            } catch {
+
             }
         }
+        
+        let myImageView = UIImageView(frame: CGRectMake(0,0,100,120))
+        let myImage = UIImage(named: "onpu350.png")
+        
+        // 画像をUIImageViewに設定する.
+        myImageView.image = myImage
+        
+        // 画像の表示する座標を指定する.
+        myImageView.layer.position = CGPoint(x: self.view.bounds.width/2, y: self.view.bounds.height/2)
+        
+        // UIImageViewをViewに追加する.
+        self.view.addSubview(myImageView)
         
         
 //        do {
@@ -66,12 +55,6 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     }
     
     override func viewWillAppear(animated: Bool) {
-        if((appDelegate.tappedSongId) != nil) {
-            print(appDelegate.tappedSongId)
-        }else {
-            
-        }
-        
     }
 
     override func didReceiveMemoryWarning() {
